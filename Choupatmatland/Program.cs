@@ -27,11 +27,27 @@ namespace Choupatmatland
             //On peut faire une invocation loopy géant 1580, crevette géante 1550
             //Tous le monde peut se soigner sois même (700 pv) ou son allié (500 pv) 40% de chance de se soigner, cible aléatoire entre sois ou allié, on peut obtenir plus de pv que les pv initiaux
             //tous peuvent rater une attaque/spéciale/mode 20%
-            //
 
+            string choupat = "Choupat";
+            string patamout = "Patamout";
+            string orochimaru = "Orochimaru";
+            string kabuto = "Kabuto";
 
+            int PvPatamout = 5000;
+            int PvChoupat = 5000;
+            int PvOrochimaru = 4000;
+            int PvKabuto = 4000;
 
+            int Atkpatamout = 700;
+            int AtkChoupat = 700;
+            int AtkOrochima = 450;
+            int AtkKabuto = 450;
 
+            int atkLoopyDeSortie = 750;
+            int crachatBoulePoil = 750;
+            int queueDeFer = 750;
+            int morsureSerpent = 700;
+            int lameChakra = 800;
 
 
 
