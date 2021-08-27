@@ -48,6 +48,7 @@ namespace Choupatmatland
             int queueDeFer = 750;
             int morsureSerpent = 700;
             int lameChakra = 800;
+            int coupdeboule = 1000;
 
 
 
