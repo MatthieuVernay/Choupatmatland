@@ -50,6 +50,7 @@ namespace Choupatmatland
             int lameChakra = 800;
             int coupdeboule = 1000;
 
+            int modChakraLoopy = 300;
 
 
             /*List<string> listeDeMonstre = new List<string>();
