@@ -74,7 +74,10 @@ namespace Choupatmatland
             int queueDémonLoopy = 350;
             int fusionDémonLoopy = 500;
 
+<<<<<<< Updated upstream
             //Mode des ennemies
+=======
+>>>>>>> Stashed changes
             int chakraCrevette = 350;
             int queuedémoncrevette = 400;
             int fusionCrevette = 600;
@@ -83,6 +86,7 @@ namespace Choupatmatland
             int loopyGéant = 1580;
             int miniLoopy = 1800;
             int crevetteGéante = 1550;
+<<<<<<< Updated upstream
             int minicrevette = 1800;
 
             Random rand = new Random();
@@ -106,6 +110,9 @@ namespace Choupatmatland
 
 
 
+=======
+            int minicrevette = 1800; 
+>>>>>>> Stashed changes
 
 
 
