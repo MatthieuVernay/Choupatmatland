@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,17 +36,12 @@ namespace Choupatmatland
             //les modes de Orochimaru et kabuto sont le chakra de la crevette 350, la queue de la crevette 400 et la fusion crevette Orochimaru/kabuto 600
             //On peut faire une invocation loopy géant 1580, crevette géante 1550
 
-            //Nom des personnages
-            string choupat = "Choupat";
-            string patamout = "Patamout";
-            string orochimaru = "Orochimaru";
-            string kabuto = "Kabuto";
 
             //Cri de guerre
             string criPatamout = "ammenez moi vers la bouffe";
             string criChoupat = "C'est mon royauuuuuume, INSECTE !";
             string criOrochimaru = "la morsure du serpent mortel vous TUERA";
-            string criKabuto = "je peut découper la pierre la plus resistante du MONDE ";
+            string criKabuto = "je peut découper la pierre la plus resistante du MONDE ";z
 
             //Pv des personnages
             int PvPatamout = 5000;
@@ -61,35 +55,7 @@ namespace Choupatmatland
             int AtkOrochima = 450;
             int AtkKabuto = 450;
 
-            //Nos attaques spéciales
-            int atkLoopyDeSortie = 750;
-            int crachatBoulePoil = 750;
-            int queueDeFer = 750;
 
-            //Attaque spéciales des ennemies
-            int morsureSerpent = 700;
-            int lameChakra = 800;
-            int coupdeboule = 1000;
-
-            //Nos modes
-            int modChakraLoopy = 300;
-            int queueDémonLoopy = 350;
-            int fusionDémonLoopy = 500;
-
-            //Mode des ennemies
-            int chakraCrevette = 350;
-            int queuedémoncrevette = 400;
-            int fusionCrevette = 600;
-
-            //Nos Invocations
-            int loopyGéant = 1580;
-            int miniLoopy = 1800;
-            int loopyFou = 2000;
-
-            //Les invocations ennemies
-            int crevetteGéante = 1550;
-            int minicrevette = 1800;
-            int crevetteFolle = 2000;
 
             Random rand = new Random();
             int choix = rand.Next(1, 6);
@@ -119,68 +85,13 @@ namespace Choupatmatland
                 return 
             }
 
-
-
-
-
-
-
-            /*List<string> listeDeMonstre = new List<string>();
-            listeDeMonstre.Add("Boros");
-            listeDeMonstre.Add("Roi des profondeur");
-            listeDeMonstre.Add("San goku ultra instinct");
-            listeDeMonstre.Add("San goku ultra instinct maitrisé");
-            listeDeMonstre.Add("Empereur patamout SUPREME");
-            listeDeMonstre.Add("Empereur choupat SUPREME");
-
-            foreach(string monstre in listeDeMonstre)
-            {
-                Console.WriteLine("Monsieur choupat, est-ce que Saitama tue {0} en un seul coup ??!!", monstre);
-                Random rand = new Random();
-                int choix = 0;
-                bool mort = false;
-                while(!mort)
-                {
-                    choix = rand.Next(1,11);
-                    Console.WriteLine("Le numéro tiré au hasard est : {0}", choix);
-                    if (choix <= 5)
-                    {
-                        Console.WriteLine("Moh boh oui il le one shoot ?!?!");
-                        mort = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("moh boh non il l'a pas one shoot !!!");
-                    }
-                }
-            }*/
-
-
-            /*string choupat = "Choupat";
-            string patamout = "Patamout";
-            Console.WriteLine("Bonjour monsieur {0}", choupat);
-            Console.WriteLine("Bonjour monsieur {0} la commande de ton telephone est avancée", patamout);
-            Console.WriteLine("Oh boh oui je vais tout kapat !");
-            Console.WriteLine("One punch !!");
-            Console.WriteLine("Combien il y a d'accessoires ?");
-            int nombreAccessoires = 0;
-            try
-            {
-                nombreAccessoires = Int32.Parse(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Une erreur c'est produite : {0}", e);
-                throw;
-            }
-
-            Console.WriteLine("Il y a : {0} accessoires", nombreAccessoires);*/
-
             Personnage Choupat = new Personnage();
-            Choupat.pointDeVie = 500;
+
 
             Personnage Patamout = new Personnage();
-            Patamout.pointDeVie = 600;
+
+
+
 
             Console.ReadLine();
         }
@@ -189,7 +100,7 @@ namespace Choupatmatland
     class Personnage
     {
         private int _pointDeVie;
-        public int pointDeVie
+        public int PointDeVie
         {
             get 
             { 
@@ -200,6 +111,105 @@ namespace Choupatmatland
                 _pointDeVie = value;
             }
         }
+
+        private int _pointATK;
+        public int PointATK
+        {
+            get
+            {
+                return _pointATK;
+            }
+            set
+            {
+                _pointATK = value;
+            }
+        }
+
+        private int _nomPerso;
+        public int NomPerso
+        {
+            get
+            {
+                return _nomPerso;
+            }
+            set
+            {
+                _nomPerso = value;
+            }
+        }
+
+        private int _criDeGuerre;
+        public int CriDeGuerre
+        {
+            get
+            {
+                return _criDeGuerre;
+            }
+            set
+            {
+                _criDeGuerre = value;
+            }
+        }
+
+        private int _nosAttaquesSpéciales;
+        public int NosAttaquesSpéciales
+        {
+            get
+            {
+                return _nosAttaquesSpéciales;
+            }
+            set
+            {
+                _nosAttaquesSpéciales = value;
+            }
+        }
+
+        
+
+
     }
+
+    enum NosAttaquesSpéciales
+    {
+        atkLoopyDeSortie = 750,
+        crachatBoulePoil = 800,
+        queueDeFer = 850
+    }
+
+    enum LesAttaquesSpécialesEnemies
+    {
+        morsureSerpent = 700,
+        lameChakra = 800,
+        coupdeboule = 1000
+    }
+
+    enum NosModes
+    {
+        modChakraLoopy = 300,
+        queueDémonLoopy = 350,
+        fusionDémonLoopy = 500
+    }
+
+    enum LesModesEnemies
+    {
+        chakraCrevette = 350,
+        queuedémoncrevette = 400,
+        fusionCrevette = 600
+    }
+
+    enum NosInvocations
+    {
+        loopyGéant = 1580,
+        miniLoopy = 1800,
+        loopyFou = 2000
+    }
+
+    enum LesinvocationEnemies
+    {
+        crevetteGéante = 1550,
+        minicrevette = 1800,
+        crevetteFolle = 2000
+    }
+
 }
 
