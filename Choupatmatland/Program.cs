@@ -53,6 +53,14 @@ namespace Choupatmatland
             int modChakraLoopy = 300;
             int queueDémonLoopy = 350;
             int fusionDémonLoopy = 500;
+            int chakraCrevette = 350;
+            int queuedémoncrevette = 400;
+            int fusionCrevette = 600;
+
+            int loopyGéant = 1580;
+            int miniLoopy = 1800;
+            int crevetteGéante = 1550;
+            int minicrevette = 1800; 
 
 
             /*List<string> listeDeMonstre = new List<string>();
