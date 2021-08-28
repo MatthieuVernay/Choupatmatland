@@ -106,7 +106,9 @@ namespace Choupatmatland
                     case 3:
                         //attaque spécial
                     case 4:
-                        //
+                    //mode
+                    case 5:
+                        //invocation
                 }
 
                 return 
