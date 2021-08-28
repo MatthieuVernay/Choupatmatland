@@ -25,6 +25,7 @@ namespace Choupatmatland
             //tous peuvent rater une attaque/spéciale/mode 20%
             //Créer pour chaque personnages un cri de guerre : Patamout -> "ammenez moi vers la bouffe" , Choupat -> "C'est mon royauuuuuume, INSECTE !"
             //1 action à la fois
+            //ressucité un allié 1 fois par partie -> 5% de chançe
 
             //FAIT 
             //les points de vie de patamout et de choupat sont a 6000 et les points de vie de Orochimaru et kabuto sont a 5700
@@ -44,8 +45,8 @@ namespace Choupatmatland
             //Cri de guerre
             string criPatamout = "ammenez moi vers la bouffe";
             string criChoupat = "C'est mon royauuuuuume, INSECTE !";
-            string criOrochimaru = "";
-            string criKabuto = "";
+            string criOrochimaru = "la morsure du serpent mortel vous TUERA";
+            string criKabuto = "je peut découper la pierre la plus resistante du MONDE ";
 
             //Pv des personnages
             int PvPatamout = 5000;
@@ -74,20 +75,20 @@ namespace Choupatmatland
             int queueDémonLoopy = 350;
             int fusionDémonLoopy = 500;
 
-<<<<<<< Updated upstream
             //Mode des ennemies
-=======
->>>>>>> Stashed changes
             int chakraCrevette = 350;
             int queuedémoncrevette = 400;
             int fusionCrevette = 600;
 
-            //Invocations
+            //Nos Invocations
             int loopyGéant = 1580;
             int miniLoopy = 1800;
+            int loopyFou = 2000;
+
+            //Les invocations ennemies
             int crevetteGéante = 1550;
-<<<<<<< Updated upstream
             int minicrevette = 1800;
+            int crevetteFolle = 2000;
 
             Random rand = new Random();
             int choix = rand.Next(1, 6);
@@ -100,7 +101,12 @@ namespace Choupatmatland
                     case 1:
                         //attaque 
                         break;
-
+                    case 2:
+                        //parer attaque
+                    case 3:
+                        //attaque spécial
+                    case 4:
+                        //
                 }
 
                 return 
