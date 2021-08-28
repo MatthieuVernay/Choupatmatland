@@ -51,6 +51,8 @@ namespace Choupatmatland
             int coupdeboule = 1000;
 
             int modChakraLoopy = 300;
+            int queueDémonLoupi = 350
+            int fusionDémonLoopy = 500
 
 
             /*List<string> listeDeMonstre = new List<string>();
