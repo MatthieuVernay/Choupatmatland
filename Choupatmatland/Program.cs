@@ -103,12 +103,16 @@ namespace Choupatmatland
                         break;
                     case 2:
                         //parer attaque
+                        break;
                     case 3:
                         //attaque spécial
+                        break;
                     case 4:
-                    //mode
+                        //mode
+                        break;
                     case 5:
                         //invocation
+                        break;
                 }
 
                 return 
