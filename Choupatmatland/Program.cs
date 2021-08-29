@@ -37,32 +37,12 @@ namespace Choupatmatland
             //On peut faire une invocation loopy géant 1580, crevette géante 1550
 
 
-            //Cri de guerre
-            string criPatamout = "ammenez moi vers la bouffe !";
-            string criChoupat = "C'est mon royauuuuuume, INSECTE !";
-            string criOrochimaru = "la morsure du serpent mortel vous TUERA !";
-            string criKabuto = "je peut découper la pierre la plus resistante du MONDE !";
-
-            //Pv des personnages
-            int PvPatamout = 5500;
-            int PvChoupat = 5000;
-            int PvOrochimaru = 4500;
-            int PvKabuto = 4500;
-
-            //Attaque des personnages
-            int Atkpatamout = 750;
-            int AtkChoupat = 700;
-            int AtkOrochima = 670;
-            int AtkKabuto = 650;
-
-
-
             Random rand = new Random();
             int choix = rand.Next(1, 6);
 
 
-            int Actions(/*string personnages*/)
-            {
+            //int Actions(/*string personnages*/)
+            /*{
                 switch (choix)
                 {
                     case 1:
@@ -83,15 +63,38 @@ namespace Choupatmatland
                 }
 
                 return 
-            }
+            }*/
 
             Personnage Choupat = new Personnage();
-
+            Choupat.PointDeVie = 5000;
+            Choupat.PointATK = 700;
+            Choupat.NomPerso = "Choupat";
+            Choupat.CriDeGuerre = "C'est mon royauuuuuume, INSECTE !";
 
             Personnage Patamout = new Personnage();
+            Patamout.PointDeVie = 5500;
+            Patamout.PointATK = 750;
+            Patamout.NomPerso = "Patamout";
+            Patamout.CriDeGuerre = "Ammenez moi vers la bouffe !";
+            
+            Personnage Orochimaru = new Personnage();
+            Orochimaru.PointDeVie = 4500;
+            Orochimaru.PointATK = 670;
+            Orochimaru.NomPerso = "Orochimaru";
+            Orochimaru.CriDeGuerre = "La morsure du serpent mortel vous TUERA !";
+
+            Personnage Kabuto = new Personnage();
+            Kabuto.PointDeVie = 4500;
+            Kabuto.PointATK = 650;
+            Kabuto.NomPerso = "Kabuto";
+            Kabuto.CriDeGuerre = "Je peut découper la pierre la plus resistante du MONDE !";
 
 
-
+            Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
+            Console.WriteLine("Les pv du Patamout sont à : {0}", Patamout.PointDeVie);
+            Console.WriteLine("Les pv du Orochimaru sont à : {0}", Orochimaru.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Kabuto.PointDeVie);
+            
 
             Console.ReadLine();
         }
@@ -125,8 +128,8 @@ namespace Choupatmatland
             }
         }
 
-        private int _nomPerso;
-        public int NomPerso
+        private string _nomPerso;
+        public string NomPerso
         {
             get
             {
@@ -138,8 +141,8 @@ namespace Choupatmatland
             }
         }
 
-        private int _criDeGuerre;
-        public int CriDeGuerre
+        private string _criDeGuerre;
+        public string CriDeGuerre
         {
             get
             {
@@ -163,10 +166,6 @@ namespace Choupatmatland
                 _nosAttaquesSpéciales = value;
             }
         }
-
-        
-
-
     }
 
     enum NosAttaquesSpéciales
