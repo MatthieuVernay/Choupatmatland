@@ -38,22 +38,22 @@ namespace Choupatmatland
 
 
             //Cri de guerre
-            string criPatamout = "ammenez moi vers la bouffe";
+            string criPatamout = "ammenez moi vers la bouffe !";
             string criChoupat = "C'est mon royauuuuuume, INSECTE !";
-            string criOrochimaru = "la morsure du serpent mortel vous TUERA";
-            string criKabuto = "je peut découper la pierre la plus resistante du MONDE ";z
+            string criOrochimaru = "la morsure du serpent mortel vous TUERA !";
+            string criKabuto = "je peut découper la pierre la plus resistante du MONDE !";
 
             //Pv des personnages
-            int PvPatamout = 5000;
+            int PvPatamout = 5500;
             int PvChoupat = 5000;
-            int PvOrochimaru = 4000;
-            int PvKabuto = 4000;
+            int PvOrochimaru = 4500;
+            int PvKabuto = 4500;
 
             //Attaque des personnages
-            int Atkpatamout = 700;
+            int Atkpatamout = 750;
             int AtkChoupat = 700;
-            int AtkOrochima = 450;
-            int AtkKabuto = 450;
+            int AtkOrochima = 670;
+            int AtkKabuto = 650;
 
 
 
