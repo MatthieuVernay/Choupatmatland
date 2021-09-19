@@ -5,3 +5,10 @@ C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\obj\Deb
 C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.CoreCompileInputs.cache
 C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
 C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.exe.config
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.exe
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.pdb
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.AssemblyReference.cache
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.CoreCompileInputs.cache
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
+C:\Users\matth\Google Drive\Choupatmatland\Choupatmatland\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
