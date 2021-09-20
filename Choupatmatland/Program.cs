@@ -16,42 +16,42 @@ namespace Choupatmatland
             //Actions : Attaque, Attaque spéciale, Soin, Invocation, Modes
 
             Random rand = new Random();
-            int choix = rand.Next(1, 6);
+            int choix = rand.Next(1, 101);
 
+            switch (choix)
+            {
+                1-40
+                41-60
+                61-80
+                81-90
+                91-100
 
-            //int Actions(/*string personnages*/)
-            /*{
-                switch (choix)
-                {
-                    case 1:
-                        //attaque 
-                        break;
-                    case 2:
-                        //parer attaque
-                        break;
-                    case 3:
-                        //attaque spécial
-                        break;
-                    case 4:
-                        //mode
-                        break;
-                    case 5:
-                        //invocation
-                        break;
-                }
-
-                return 
-            }*/
+                case :
+                    //attaque 
+                    break;
+                case 2:
+                    //parer attaque
+                    break;
+                case 3:
+                    //attaque spécial
+                    break;
+                case 4:
+                    //mode
+                    break;
+                case 5:
+                    //invocation
+                    break;
+            }
 
             Personnage Choupat = new Personnage();
-            Choupat.PointDeVie = 5000;
+            Choupat.PointDeVie = 8000;
             Choupat.PointATK = 700;
             Choupat.NomPerso = "Choupat";
             Choupat.CriDeGuerre = "C'est mon royauuuuuume, INSECTE !";
             Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
 
             Personnage Patamout = new Personnage();
-            Patamout.PointDeVie = 5500;
+            Patamout.PointDeVie = 9900;
             Patamout.PointATK = 750;
             Patamout.NomPerso = "Patamout";
             Patamout.CriDeGuerre = "Ammenez moi vers la bouffe !";
@@ -78,22 +78,33 @@ namespace Choupatmatland
             }
             
             Personnage Orochimaru = new Personnage();
-            Orochimaru.PointDeVie = 4500;
+            Orochimaru.PointDeVie = 6000;
             Orochimaru.PointATK = 670;
             Orochimaru.NomPerso = "Orochimaru";
             Orochimaru.CriDeGuerre = "La morsure du serpent mortel vous TUERA !";
 
             Personnage Kabuto = new Personnage();
-            Kabuto.PointDeVie = 4500;
+            Kabuto.PointDeVie = 5500;
             Kabuto.PointATK = 650;
             Kabuto.NomPerso = "Kabuto";
             Kabuto.CriDeGuerre = "Je peut découper la pierre la plus resistante du MONDE !";
+
+            Personnage Zul_djin = new Personnage();
+            Zul_djin.PointDeVie = 7000;
+            Zul_djin.PointATK = 700;
+            Zul_djin.NomPerso = "Zul_djin";
+            Zul_djin.CriDeGuerre = "Je peut découper la pierre la plus resistante du MONDE !";
 
 
             Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
             Console.WriteLine("Les pv du Patamout sont à : {0}", Patamout.PointDeVie);
             Console.WriteLine("Les pv du Orochimaru sont à : {0}", Orochimaru.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Kabuto.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Zul_djin.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Patamout_corrompue.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Choupat_corrmpue.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Mini_rag.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Le_boucher.PointDeVie);
             
 
             Console.ReadLine();
