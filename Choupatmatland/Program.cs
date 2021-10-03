@@ -93,16 +93,45 @@ namespace Choupatmatland
             Zul_djin.PointDeVie = 7000;
             Zul_djin.PointATK = 700;
             Zul_djin.NomPerso = "Zul_djin";
-            Zul_djin.CriDeGuerre = "Je peut découper la pierre la plus resistante du MONDE !";
+            Zul_djin.CriDeGuerre = "zul-djin il va ou il va !";
 
+            Personnage Patamout_corrompue = new Personnage();
+            Patamout_corrompue.PointDeVie = 8000;
+            Patamout_corrompue.PointATK = 800;
+            Patamout_corrompue.NomPerso = "Patamout_corrompue";
+            Patamout_corrompue.CriDeGuerre = "";
 
-            Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
+            Personnage Choupat_corrompue = new Personnage();
+            Choupat_corrompue.PointDeVie = 8000;
+            Choupat_corrompue.PointATK = 800;
+            Choupat_corrompue.NomPerso = "Choupat_corrompue";
+            Choupat_corrompue.CriDeGuerre = "";
+
+            Personnage Ragnaros = new Personnage();
+            Ragnaros.PointDeVie = 8000;
+            Ragnaros.PointATK = 800;
+            Ragnaros.NomPerso = "Ragnaros";
+            Ragnaros.CriDeGuerre = "";
+
+            Personnage Mini_rag = new Personnage();
+            Mini_rag.PointDeVie = 8000;
+            Mini_rag.PointATK = 800;
+            Mini_rag.NomPerso = "Ragnaros";
+            Mini_rag.CriDeGuerre = "";
+
+            Personnage Le_boucher = new Personnage();
+            Le_boucher.PointDeVie = 8000;
+            Le_boucher.PointATK = 800;
+            Le_boucher.NomPerso = "Ragnaros";
+            Le_boucher.CriDeGuerre = "";
+
+Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
             Console.WriteLine("Les pv du Patamout sont à : {0}", Patamout.PointDeVie);
             Console.WriteLine("Les pv du Orochimaru sont à : {0}", Orochimaru.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Kabuto.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Zul_djin.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Patamout_corrompue.PointDeVie);
-            Console.WriteLine("Les pv du Kabuto sont à : {0}", Choupat_corrmpue.PointDeVie);
+            Console.WriteLine("Les pv du Kabuto sont à : {0}", Choupat_corrompue.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Mini_rag.PointDeVie);
             Console.WriteLine("Les pv du Kabuto sont à : {0}", Le_boucher.PointDeVie);
             
