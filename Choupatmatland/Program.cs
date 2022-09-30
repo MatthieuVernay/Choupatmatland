@@ -63,14 +63,14 @@ namespace Choupatmatland
             Ragnaros.CriDeGuerre = "MOURREZ INSECTE !!";
 
             Personnage Mini_rag = new Personnage();
-            Mini_rag.PointDeVie = 9000;
+            Mini_rag.PointDeVie = 19000;
             Mini_rag.PointATK = 1000;
             Mini_rag.NomPerso = "Mini_rag";
             Mini_rag.CriDeGuerre = "";
 
             Personnage Le_boucher = new Personnage();
-            Le_boucher.PointDeVie = 10000;
-            Le_boucher.PointATK = 1150;
+            Le_boucher.PointDeVie = 15000;
+            Le_boucher.PointATK = 5000;
             Le_boucher.NomPerso = "Le_boucher";
             Le_boucher.CriDeGuerre = "";
 
@@ -81,7 +81,7 @@ namespace Choupatmatland
             Saitama.CriDeGuerre = "";
 
             Personnage Goku = new Personnage();
-            Goku.PointDeVie = 12000;
+            Goku.PointDeVie = 30000;
             Goku.PointATK = 1200;
             Goku.NomPerso = "Goku";
             Goku.CriDeGuerre = "";
