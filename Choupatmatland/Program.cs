@@ -18,7 +18,6 @@ namespace Choupatmatland
             Choupat.PointATK = 1700;
             Choupat.NomPerso = "Choupat";
             Choupat.CriDeGuerre = "C'est mon royauuuuuume, INSECTE !";
-            Console.WriteLine("Les pv du choupat sont à : {0}", Choupat.PointDeVie);
 
             Personnage Patamout = new Personnage();
             Patamout.PointDeVie = 20000;
@@ -75,7 +74,7 @@ namespace Choupatmatland
             Le_boucher.CriDeGuerre = "";
 
             Personnage Saitama = new Personnage();
-            Saitama.PointDeVie = 14000;
+            Saitama.PointDeVie = 20000;
             Saitama.PointATK = 1400;
             Saitama.NomPerso = "Saitama";
             Saitama.CriDeGuerre = "";
