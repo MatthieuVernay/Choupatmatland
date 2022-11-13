@@ -22,3 +22,7 @@ C:\Users\lcdsv\Documents\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.
 C:\Users\lcdsv\Documents\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
 C:\Users\lcdsv\Documents\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
 >>>>>>> Stashed changes
+G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.AssemblyReference.cache
+G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.CoreCompileInputs.cache
+G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
+G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
