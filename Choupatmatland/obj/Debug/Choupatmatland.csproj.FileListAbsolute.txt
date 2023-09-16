@@ -26,3 +26,11 @@ G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.Assem
 G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.CoreCompileInputs.cache
 G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
 G:\Mon Drive\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.exe.config
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.exe
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\bin\Debug\Choupatmatland.pdb
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.AssemblyReference.cache
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.SuggestedBindingRedirects.cache
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.csproj.CoreCompileInputs.cache
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.exe
+G:\Mon Drive\DEV\Choupatmatland\Choupatmatland\obj\Debug\Choupatmatland.pdb
