@@ -65,25 +65,25 @@ namespace Choupatmatland
             Mini_rag.PointDeVie = 19000;
             Mini_rag.PointATK = 1000;
             Mini_rag.NomPerso = "Mini_rag";
-            Mini_rag.CriDeGuerre = "";
+            Mini_rag.CriDeGuerre = "c'est mon royaume insecte !";
 
             Personnage Le_boucher = new Personnage();
             Le_boucher.PointDeVie = 15000;
             Le_boucher.PointATK = 5000;
             Le_boucher.NomPerso = "Le_boucher";
-            Le_boucher.CriDeGuerre = "";
+            Le_boucher.CriDeGuerre = "De la viande fraiche !";
 
             Personnage Saitama = new Personnage();
             Saitama.PointDeVie = 20000;
             Saitama.PointATK = 1400;
             Saitama.NomPerso = "Saitama";
-            Saitama.CriDeGuerre = "";
+            Saitama.CriDeGuerre = "ONE PUUUUUUNNNNCH !";
 
             Personnage Goku = new Personnage();
             Goku.PointDeVie = 30000;
             Goku.PointATK = 1200;
             Goku.NomPerso = "Goku";
-            Goku.CriDeGuerre = "";
+            Goku.CriDeGuerre = "KAME AHME AHHHHHHHHHHH !";
 
             /*********************************************************************************************************************/
 
@@ -246,114 +246,552 @@ namespace Choupatmatland
                                 Goku.PointDeVie -= Patamout.PointATK;
                                 Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
                                 break;
-                        }
-
-                        /*else if (choixQuiEstAttaquer == 1)
-                        {*/
-                            //Patamout attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
-
-
-                           /* Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
-                        }*/
-                        
+                        }                        
                     }
                     else if (choixOrdreAttaque == 2)
                     {
                         //Choupat attaque
-                        if (choixQuiEstAttaquer == 1)
+                        switch (choixQuiEstAttaquer) //On choisit qui le Choupat va attaquer
                         {
-                            //Choupat attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
+                            case 1:
+                                //Choupat attaque Orochimaru
 
+                                //A rajouter : Choisir une action entre raté, esquive, et parade car actuellement on fait les 3 en même temps !
 
-                            Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                //% de chance de rater
+                                if (chanceRater < 16)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("L'attaque de Patamout a raté !");
+                                    break;
+                                }
+                                //% de chance d'orochimaru d'esquiver
+                                if (chanceEsquive < 21)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("Orochimaru a esquivé l'attaque du patamout !");
+                                    break;
+                                }
+                                //% de chance de parer et contre attaquer
+                                if (chanceParadeAttaque < 6)
+                                {
+                                    Patamout.PointATK = 0;
+                                    Console.WriteLine("Orochimaru a paré l'attaque du patamout ! Il va contre-attaquer !");
+                                    break;
+                                }
 
-                            //Choupat attaque
-                            break;
+                                Orochimaru.PointDeVie -= Choupat.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimaru", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 2:
+                                //Patamout attaque Kabuto
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Kabuto.PointDeVie -= Choupat.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 3:
+                                //Patamout attaque Zul_djin
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Zul_djin.PointDeVie -= Choupat.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 4:
+                                //Patamout attaque Patamout_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout_corrompue.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 5:
+                                //Patamout attaque Choupat_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Choupat_corrompue.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 6:
+                                //Patamout attaque Ragnaros
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Ragnaros.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 7:
+                                //Patamout attaque Mini_rag
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Mini_rag.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 8:
+                                //Patamout attaque Le_boucher
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Le_boucher.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 9:
+                                //Patamout attaque Saitama
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Saitama.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 10:
+                                //Patamout attaque Goku
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Goku.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
                         }
                     }
                     else if (choixOrdreAttaque == 3)
                     {
-                        //Choupat attaque
-                        if (choixQuiEstAttaquer == 1)
-                        {
-                            //Choupat attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
-
-
-                            Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
-
-                            //Choupat attaque
-                            break;
-                        }
                         //Orochimaru attaque
+                        switch (choixQuiEstAttaquer) //On choisit qui le Orochimaru va attaquer
+                        {
+                            case 1:
+                                //Orochimaru attaque Choupat
+
+                                //A rajouter : Choisir une action entre raté, esquive, et parade car actuellement on fait les 3 en même temps !
+
+                                //% de chance de rater
+                                if (chanceRater < 16)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("L'attaque de Orochimaru a raté !");
+                                    break;
+                                }
+                                //% de chance d'orochimaru d'esquiver
+                                if (chanceEsquive < 21)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("Choupat a esquivé l'attaque de Orochimaru !");
+                                    break;
+                                }
+                                //% de chance de parer et contre attaquer
+                                if (chanceParadeAttaque < 6)
+                                {
+                                    Patamout.PointATK = 0;
+                                    Console.WriteLine("Orochimaru a paré l'attaque du patamout ! Il va contre-attaquer !");
+                                    break;
+                                }
+
+                                Choupat.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Choupat.\n Il ne reste plus que {1} points de vie à orochimaru", Orochimaru.PointATK, Choupat.PointDeVie);
+                                break;
+                            case 2:
+                                //Orochimaru attaque Patamout
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Patamout.\n Il ne reste plus que {1} points de vie à Patamout", Orochimaru.PointATK, Patamout.PointDeVie);
+                                break;
+                            case 3:
+                                //Orochimaru attaque Zul_djin
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Zul_djin.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 4:
+                                //Orochimaru attaque Patamout_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 5:
+                                //Patamout attaque Choupat_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Choupat_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 6:
+                                //Patamout attaque Ragnaros
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Ragnaros.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 7:
+                                //Patamout attaque Mini_rag
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Mini_rag.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 8:
+                                //Patamout attaque Le_boucher
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Le_boucher.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 9:
+                                //Patamout attaque Saitama
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Saitama.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 10:
+                                //Patamout attaque Goku
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Goku.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                        }
                     }
                     else if (choixOrdreAttaque == 4)
                     {
-                        //Choupat attaque
-                        if (choixQuiEstAttaquer == 1)
-                        {
-                            //Choupat attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
-
-
-                            Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
-
-                            //Choupat attaque
-                            break;
-                        }
                         //Kabuto attaque
+                        switch (choixQuiEstAttaquer) //On choisit qui le Orochimaru va attaquer
+                        {
+                            case 1:
+                                //Orochimaru attaque Choupat
+
+                                //A rajouter : Choisir une action entre raté, esquive, et parade car actuellement on fait les 3 en même temps !
+
+                                //% de chance de rater
+                                if (chanceRater < 16)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("L'attaque de Orochimaru a raté !");
+                                    break;
+                                }
+                                //% de chance d'orochimaru d'esquiver
+                                if (chanceEsquive < 21)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("Choupat a esquivé l'attaque de Orochimaru !");
+                                    break;
+                                }
+                                //% de chance de parer et contre attaquer
+                                if (chanceParadeAttaque < 6)
+                                {
+                                    Patamout.PointATK = 0;
+                                    Console.WriteLine("Orochimaru a paré l'attaque du patamout ! Il va contre-attaquer !");
+                                    break;
+                                }
+
+                                Choupat.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Choupat.\n Il ne reste plus que {1} points de vie à orochimaru", Orochimaru.PointATK, Choupat.PointDeVie);
+                                break;
+                            case 2:
+                                //Orochimaru attaque Patamout
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Patamout.\n Il ne reste plus que {1} points de vie à Patamout", Orochimaru.PointATK, Patamout.PointDeVie);
+                                break;
+                            case 3:
+                                //Orochimaru attaque Zul_djin
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Zul_djin.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 4:
+                                //Orochimaru attaque Patamout_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 5:
+                                //Patamout attaque Choupat_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Choupat_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 6:
+                                //Patamout attaque Ragnaros
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Ragnaros.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 7:
+                                //Patamout attaque Mini_rag
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Mini_rag.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 8:
+                                //Patamout attaque Le_boucher
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Le_boucher.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 9:
+                                //Patamout attaque Saitama
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Saitama.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 10:
+                                //Patamout attaque Goku
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Goku.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                        }
                     }
                     else if (choixOrdreAttaque == 5)
                     {
                         //Choupat attaque
-                        if (choixQuiEstAttaquer == 1)
+                        switch (choixQuiEstAttaquer) //On choisit qui le Orochimaru va attaquer
                         {
-                            //Choupat attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
+                            case 1:
+                                //Orochimaru attaque Choupat
 
+                                //A rajouter : Choisir une action entre raté, esquive, et parade car actuellement on fait les 3 en même temps !
 
-                            Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                //% de chance de rater
+                                if (chanceRater < 16)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("L'attaque de Orochimaru a raté !");
+                                    break;
+                                }
+                                //% de chance d'orochimaru d'esquiver
+                                if (chanceEsquive < 21)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("Choupat a esquivé l'attaque de Orochimaru !");
+                                    break;
+                                }
+                                //% de chance de parer et contre attaquer
+                                if (chanceParadeAttaque < 6)
+                                {
+                                    Patamout.PointATK = 0;
+                                    Console.WriteLine("Orochimaru a paré l'attaque du patamout ! Il va contre-attaquer !");
+                                    break;
+                                }
 
-                            //Choupat attaque
-                            break;
+                                Choupat.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Choupat.\n Il ne reste plus que {1} points de vie à orochimaru", Orochimaru.PointATK, Choupat.PointDeVie);
+                                break;
+                            case 2:
+                                //Orochimaru attaque Patamout
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Patamout.\n Il ne reste plus que {1} points de vie à Patamout", Orochimaru.PointATK, Patamout.PointDeVie);
+                                break;
+                            case 3:
+                                //Orochimaru attaque Zul_djin
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Zul_djin.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 4:
+                                //Orochimaru attaque Patamout_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 5:
+                                //Patamout attaque Choupat_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Choupat_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 6:
+                                //Patamout attaque Ragnaros
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Ragnaros.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 7:
+                                //Patamout attaque Mini_rag
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Mini_rag.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 8:
+                                //Patamout attaque Le_boucher
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Le_boucher.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 9:
+                                //Patamout attaque Saitama
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Saitama.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 10:
+                                //Patamout attaque Goku
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Goku.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
                         }
-                        //Choupat attaque
                     }
                     else if (choixOrdreAttaque == 6)
                     {
                         //Choupat attaque
-                        if (choixQuiEstAttaquer == 1)
+                        switch (choixQuiEstAttaquer) //On choisit qui le Orochimaru va attaquer
                         {
-                            //Choupat attaque Orochimaru
-                            //% de chance de rater
-                            //% de chance d'orochimaru d'esquiver
-                            //% de chance de parer et contre attaquer
+                            case 1:
+                                //Orochimaru attaque Choupat
 
+                                //A rajouter : Choisir une action entre raté, esquive, et parade car actuellement on fait les 3 en même temps !
 
-                            Orochimaru.PointDeVie -= Patamout.PointATK;
-                            Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                //% de chance de rater
+                                if (chanceRater < 16)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("L'attaque de Orochimaru a raté !");
+                                    break;
+                                }
+                                //% de chance d'orochimaru d'esquiver
+                                if (chanceEsquive < 21)
+                                {
+                                    /*Patamout.PointATK = 0;*/
+                                    Console.WriteLine("Choupat a esquivé l'attaque de Orochimaru !");
+                                    break;
+                                }
+                                //% de chance de parer et contre attaquer
+                                if (chanceParadeAttaque < 6)
+                                {
+                                    Patamout.PointATK = 0;
+                                    Console.WriteLine("Orochimaru a paré l'attaque du patamout ! Il va contre-attaquer !");
+                                    break;
+                                }
 
-                            //Choupat attaque
-                            break;
+                                Choupat.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Choupat.\n Il ne reste plus que {1} points de vie à orochimaru", Orochimaru.PointATK, Choupat.PointDeVie);
+                                break;
+                            case 2:
+                                //Orochimaru attaque Patamout
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Orochimaru inflige {0} points de dégâts à Patamout.\n Il ne reste plus que {1} points de vie à Patamout", Orochimaru.PointATK, Patamout.PointDeVie);
+                                break;
+                            case 3:
+                                //Orochimaru attaque Zul_djin
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Zul_djin.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Choupat inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 4:
+                                //Orochimaru attaque Patamout_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Patamout_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Choupat.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 5:
+                                //Patamout attaque Choupat_corrompue
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Choupat_corrompue.PointDeVie -= Orochimaru.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 6:
+                                //Patamout attaque Ragnaros
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Ragnaros.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 7:
+                                //Patamout attaque Mini_rag
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Mini_rag.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 8:
+                                //Patamout attaque Le_boucher
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Le_boucher.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 9:
+                                //Patamout attaque Saitama
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Saitama.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
+                            case 10:
+                                //Patamout attaque Goku
+                                //% de chance de rater
+                                //% de chance d'orochimaru d'esquiver
+                                //% de chance de parer et contre attaquer
+                                Goku.PointDeVie -= Patamout.PointATK;
+                                Console.WriteLine("Patamout inflige {0} points de dégâts à Orochimaru.\n Il ne reste plus que {1} points de vie à orochimarud", Patamout.PointATK, Orochimaru.PointDeVie);
+                                break;
                         }
-                        //zul-djin attaque
                     }
                     else if (choixOrdreAttaque == 7)
                     {
@@ -533,14 +971,8 @@ namespace Choupatmatland
         private int _pointDeVie;
         public int PointDeVie
         {
-            get
-            {
-                return _pointDeVie;
-            }
-            set
-            {
-                _pointDeVie = value;
-            }
+            get{return _pointDeVie;}
+            set{_pointDeVie = value;}
         }
 
         private int _pointATK;
@@ -603,6 +1035,7 @@ namespace Choupatmatland
         queueDeFer = 850
     }
 
+    /*Attaque de Orochimaru et Kabuto*/
     enum LesAttaquesSpécialesEnemies
     {
         morsureSerpent = 700,
@@ -617,6 +1050,7 @@ namespace Choupatmatland
         fusionDémonLoopy = 500
     }
 
+    /*Mode de Orochimaru et Kabuto*/
     enum LesModesEnemies
     {
         chakraCrevette = 350,
@@ -633,6 +1067,7 @@ namespace Choupatmatland
         choupatfou = 3500
     }
 
+    /*Invocation de Orochimaru et Kabuto*/
     enum LesinvocationEnemies
     {
         crevetteGéante = 1550,
